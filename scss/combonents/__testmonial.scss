@@ -1,0 +1,108 @@
+.testmonials {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .all-testmonial {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+
+        .box {
+            background-color: $backgroundColor;
+            position: relative;
+            @include flixbox(center, center, column);
+            padding: 10px;
+            padding-top: 35px;
+            padding-bottom: 40px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            padding-right: 30px;
+            box-shadow: 2px 2px 2px #d3b36a42;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 2px;
+                height: 0;
+                background-color: $linkColor;
+                transition: 0.3s;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 0px;
+                height: 2px;
+                background-color: $linkColor;
+                transition: 0.3s;
+            }
+
+
+            &:hover {
+                transform: scale(1.03);
+                .image{
+                    border: 4px solid $linkColor;
+                }
+
+                &::before {
+                    height: 50%;
+
+                }
+
+                &::after {
+                    width: 50%;
+                }
+            }
+
+            .image {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                overflow: hidden;
+                top: -35px;
+                border: 3px solid $maincolor;
+                transition: 0.3s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h3 {
+                color: $linkColor;
+            }
+
+            .postion {
+                color: $maincolor;
+                font-weight: bold;
+                font-size: 13px;
+            }
+
+            .stars {
+                i {
+                    color: $secondaryColor;
+                }
+            }
+
+            .desc {
+                color: $maincolor;
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+}

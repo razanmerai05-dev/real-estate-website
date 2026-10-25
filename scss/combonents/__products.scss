@@ -1,0 +1,233 @@
+.products {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .filter {
+        display: flex;
+        gap: 2px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            background-color: $maincolor;
+            color: $linkColor;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $linkColor;
+                color: $maincolor;
+            }
+
+        }
+
+        li.active {
+            background-color: $linkColor;
+            color: $maincolor;
+        }
+
+    }
+
+    .all-products {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        // gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        @include media-up(md) {
+            justify-content: flex-start;
+
+        }
+
+        .product {
+            background-color: $backgroundColor;
+            border-radius: 5px;
+            padding-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s;
+            box-shadow: 2px 2px 2px rgba(197, 197, 197, 0.678);
+            width: 400px !important;
+
+            @include media-up(md) {
+                width: 300px !important;
+
+
+            }
+
+            &.hide {
+                display: none !important;
+                /* لضمان اختفائه تماماً وإفراغ مكانه في الـ Grid */
+            }
+
+
+            .offer {
+                position: absolute;
+                z-index: 1500;
+                color: $maincolor;
+                background-color: $linkColor;
+                width: 150px;
+                transform: rotate(-45deg);
+                left: -35px;
+                top: 25px;
+                text-align: center;
+            }
+
+            .arow {
+                color: $secondaryColor;
+                background-color: #1b2738c5;
+                padding: 5px;
+                font-size: 12px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .crown {
+                position: absolute;
+                color: $linkColor;
+                font-size: 30px;
+                left: 0;
+                top: 5px;
+                z-index: 1500;
+                transform: rotate(-45deg);
+            }
+
+            // &:hover {
+            //     transform: translateY(-10px);
+            // }
+
+            .swiper {
+                .swiper-wrapper {
+
+                    .imge {
+                        width: 100%;
+                        height: 250px;
+                        overflow: hidden;
+
+
+                        img {
+                            width: 100%;
+                            height: 250px;
+                            object-fit: cover;
+                            cursor: pointer;
+                            transition: 0.3s;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .info {
+                padding: 10px;
+
+                .category {
+                    color: white;
+                    background-color: $maincolor;
+                    border-radius: 10px;
+                    padding: 0 15px;
+                    width: fit-content;
+                    display: flex;
+                }
+
+                hr {
+                    margin: 5px 0;
+                    height: 0.5px;
+                    background-color: #d3b36a7e;
+                    width: 80%;
+                    border: none;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    color: $maincolor;
+                }
+
+                .location {
+                    font-size: 12px;
+                    color: $maincolor;
+                    position: relative;
+                    margin-right: 15px;
+
+                    &::before {
+                        position: absolute;
+                        content: "\f3c5";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        top: 50%;
+                        right: -15px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                .prpos {
+                    display: flex;
+
+                    li {
+                        @include flixbox(center, center, column);
+                        padding: 5px;
+                        color: $linkColor;
+                        margin-left: 10px;
+
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .conect {
+                    @include flixbox();
+                    gap: 10px;
+
+                    button {
+                        transition: 0.3s;
+                        @include flixbox();
+                        text-align: center;
+                        border: none;
+                        padding-right: 25px;
+                        padding-left: 25px;
+                        font-size: 18px;
+                        transition: 0.3s;
+
+                        .btn-icon {
+                            padding-right: 10px;
+                            transform: translateY(20%);
+                            transition: 0.3s;
+                        }
+                    }
+
+                    button:hover {
+                        .btn-icon {
+                            padding-right: 15px;
+                        }
+                    }
+
+                    .cf {
+
+                        color: $linkColor;
+                        transition: 0.3s;
+                        font-size: 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $maincolor;
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

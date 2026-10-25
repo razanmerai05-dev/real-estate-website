@@ -1,0 +1,306 @@
+.real-estate-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh; // ارتفاع السيكشن بالنسبة للشاشة
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+
+    // تنسيق الفيديو ليملاْ السيكشن تماماً بدون تشويه
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    // الطبقة السوداء الشفافة لزيادة تباين النص
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45); // يمكنك تعديل الشفافية حسب رغبتك
+        z-index: 2;
+    }
+
+    // تنسيق المحتوى ليكون فوق الفيديو والطبقة الشفافة
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 800px;
+        padding: 0 20px;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+    }
+}
+
+.content-page {
+    .inner-content {
+        .right-section {
+            .box-note {
+                border: 4px solid $linkColor;
+                border-radius: 10px;
+                padding: 25px;
+                display: flex;
+                flex-direction: column;
+
+                i {
+                    font-size: 50px;
+                    color: $linkColor;
+
+
+                    &:last-child {
+                        display: flex;
+                        rotate: calc(180deg);
+                        align-self: flex-end;
+
+                    }
+                }
+
+                p {
+                    color: $maincolor;
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+            }
+
+            .box-vedio {
+                margin-top: 25px;
+                @include flixbox();
+                object-fit: contain;
+                height: 500px;
+                width: 100%;
+
+                video {
+                    width: 100%;
+                    border-radius: 6px;
+                    height: 100%;
+                }
+
+            }
+
+            ul {
+                li {
+                    position: relative;
+                    color: $maincolor;
+                    font-size: 18px;
+                    padding-right: 20px;
+
+
+                    &::before {
+                        position: absolute;
+                        content: "\f00c";
+                        font-weight: bold;
+                        font-family: "Font Awesome 5 Free";
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        padding: 2px;
+                        color: #fff;
+                        background-color: $linkColor;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -10px;
+                        @include flixbox();
+                    }
+                }
+            }
+
+            .person-blog {
+                @include flixbox(start);
+                gap: 20px;
+                border: 1px solid #d3b36a65;
+                border-radius: 10px;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                padding: 20px;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+
+                    border-radius: 50%;
+                }
+
+                .info-person {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    span {
+                        &:first-child {
+                            font-size: 13px;
+                            @include media-up(md){
+                                font-size: 18px;
+                            }
+                            color: $maincolor;
+                            
+                            font-weight: bold;
+                        }
+
+                    }
+
+                    .span2 {
+                        color: $linkColor;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        @include media-up(md){
+
+                            font-size:20px;
+                        }
+                        
+                        color: $maincolor;
+                    }
+
+                    .icons {
+
+                        i {
+                            font-size: 15px;
+                            @include media-up(md){
+                                font-size: 30px;
+                            }
+                            cursor: pointer;
+                            transition: 0.3s;
+                            color: $linkColor ;
+
+                            &:hover {
+                                scale: 1.05;
+                                color: $maincolor;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            h4 {
+                color: $linkColor;
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .left-section {
+            h4 {
+                margin-top: 25px;
+            }
+
+            .news {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .new-artical {
+
+                    @include flixbox(start);
+                    gap: 15px;
+
+                    img {
+                        width: 130px;
+                        height: 100px;
+                        border-radius: 15px;
+                    }
+
+                    p {
+                        color: $maincolor;
+                        font-size: 18px;
+                        font-weight: 600;
+                        span{
+                            color: #1b2738cb;
+                            i{
+                                color: $linkColor;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .category {
+                margin-bottom: 20px;
+
+                ul {
+                    li {
+                        position: relative;
+                        color: $maincolor;
+                        font-size: 18px;
+                        font-weight: 600;
+                        padding-right: 15px;
+                        cursor: pointer;
+
+                        &::before {
+                            position: absolute;
+                            content: "\f104";
+                            font-weight: bold;
+                            font-family: "Font Awesome 5 Free";
+                            color: $maincolor;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -5px;
+                            @include flixbox();
+                        }
+                    }
+                }
+            }
+
+            .tags {
+                margin-top: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                button {
+                    color: $maincolor;
+                    background-color: transparent;
+                    padding: 10px 15px;
+                    font-size: 20px;
+                    text-align: center;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    border: 1px solid #1b273848;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: $linkColor;
+                        border: 1px solid #d3b36a65;
+                        color: white;
+                    }
+
+
+                }
+            }
+
+        }
+    }
+}

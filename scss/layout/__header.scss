@@ -1,0 +1,69 @@
+header {
+    background-color: white;
+    height: 60px;
+    @include flixbox();
+ 
+
+    nav {
+        @include container;
+        @include flixbox(space-between);
+
+
+        ul {
+            list-style-type: none;
+            display: none;
+
+            @include media-up(md) {
+
+                @include flixbox();
+                gap: 20px;
+            }
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-weight: 700;
+                    color: $maincolor;
+
+                    &:hover {
+                        color: $linkColor;
+                    }
+                }
+            }
+        }
+
+        .icons {
+            display: none;
+
+            @include media-up(md) {
+                display: flex;
+                gap: 15px;
+                font-size: 20px;
+            }
+
+            a {
+                color: $maincolor;
+
+                &:hover {
+                    color: $linkColor;
+                }
+            }
+        }
+
+        .mobile-nav-icon {
+            display: flex;
+
+            @include media-up(md) {
+                display: none;
+            }
+
+            color: $maincolor;
+            cursor: pointer;
+
+            &:hover {
+                color: $linkColor;
+            }
+        }
+
+    }
+}
