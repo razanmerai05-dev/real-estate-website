@@ -331,7 +331,7 @@ header nav .mobile-nav-icon:hover {
 }
 .hero {
   background-color: #1B2738;
-  background-image: url("/assets/images/hero-bg.jpg");
+  background-image: url("../images/hero-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -428,7 +428,7 @@ header nav .mobile-nav-icon:hover {
   padding: 10px;
   color: white;
   font-size: 20px;
-  right: 20px;
+  left: 20px;
   bottom: -50px;
   cursor: pointer;
   transition: 0.3s;
