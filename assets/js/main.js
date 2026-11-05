@@ -3,7 +3,7 @@ let aside=document.getElementById("aside");
 
 mobile_nav_icon.addEventListener("click" ,()=>{
     if(aside.style.right==="0px"){
-        aside.style.right="-250px";
+        aside.style.right="-280px";
     }else{
         aside.style.right="0px";
     }
@@ -11,7 +11,7 @@ mobile_nav_icon.addEventListener("click" ,()=>{
 
 document.addEventListener("click",(e)=>{
     if(!aside.contains(e.target) && e.target !== mobile_nav_icon){
-        aside.style.right="-250px";
+        aside.style.right="-280px";
     }
 });
 
@@ -65,22 +65,5 @@ btns.forEach((btn) => {
 
 
 
-
-let btn=document.querySelector(".go-top");
-window.addEventListener("scroll",()=>{
-    // console.log(window.scrollY)
-    if(window.scrollY>=600){
-        btn.classList.add("go-show");
-    }else{
-        btn.classList.remove("go-show");
-
-    }
-});
-btn.addEventListener("click" , ()=>{
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    })
-})
 
 

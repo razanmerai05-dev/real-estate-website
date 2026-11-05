@@ -1,20 +1,39 @@
-$maincolor:#1B2738;
-$secondaryColor:#e6be3d;
-$linkColor:#d3b46a;
-$backgroundColor:#ffffff;
-$paragraphs:#4a5568;
+$maincolor:#121212;
+$secondaryColor:#ffffff;
+$linkColor:#e09c25;
+$backgroundColor:#2b2b2b;
+$paragraphs:#e0e0e0;
 $breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  // sm: 576px,
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
+  sm:400px,
+  md:550px,
+  lg:700px,
+  xl:992px,
+  xxl:1200px,
+  xxxl:1536px,
+  xxxxl:1792px
 );
 $container-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  sm: 370px,
+  md: 550px,
+  lg: 700px,
+  xl: 930px,
+  xxl: 1140px,
+  xxxl:1440px,
+  xxxxl:1680px
 );
+.btn2{
+  background-color: $linkColor !important;
+  color: $secondaryColor;
+  cursor: pointer;
+  &:hover{
+    background-color: #c98b20c5 !important;
+
+  }
+
+}

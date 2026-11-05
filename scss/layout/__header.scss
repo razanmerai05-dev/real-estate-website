@@ -1,13 +1,23 @@
 header {
-    background-color: white;
     height: 60px;
-    @include flixbox();
- 
+    
+    @include media-up(md) {
+        @include container;
+        @include flixbox();
+        align-items: center;
+
+    }
+
+
 
     nav {
-        @include container;
-        @include flixbox(space-between);
+        width: 100%;
+        // background-color: rgba(18, 18, 18, 0.95);
 
+        @include flixbox(space-between);
+        // backdrop-filter: blur(10px);
+        // box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        // border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 
         ul {
             list-style-type: none;
@@ -16,14 +26,47 @@ header {
             @include media-up(md) {
 
                 @include flixbox();
-                gap: 20px;
+                gap: 10px;
+            }
+
+            @include media-up(lg) {
+                gap: 25px;
+            }
+
+            @include media-up(xxl) {
+                gap: 35px;
+            }
+            @include media-up(xxxl) {
+                gap: 40px;
             }
 
             li {
                 a {
                     text-decoration: none;
-                    font-weight: 700;
-                    color: $maincolor;
+                    // font-weight: 400;
+                    font-size: 13px;
+                    font-family: cairo;
+                    color: $paragraphs;
+
+                    @include media-up(md){
+                        font-size: 12px;
+
+                    }
+
+                    @include media-up(lg){
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    @include media-up(xxl) {
+                        font-size: 18px;
+
+
+                    }
+                    @include media-up(xxxl) {
+                        font-size: 22px;
+
+
+                    }
 
                     &:hover {
                         color: $linkColor;
@@ -37,27 +80,43 @@ header {
 
             @include media-up(md) {
                 display: flex;
-                gap: 15px;
+                gap: 8px;
+                padding-left: 3%;
+                font-size: 12px;
+            }
+
+            // @include media-up(lg){
+            //     font-size: 20px;
+            //     gap: 10px;
+            // }
+            @include media-up(xxl) {
                 font-size: 20px;
+                gap: 15px;
+            }
+            @include media-up(xxxl) {
+                font-size: 25px;
+                gap: 20px;
             }
 
             a {
-                color: $maincolor;
+                color: $linkColor;
 
                 &:hover {
-                    color: $linkColor;
+                    color: $paragraphs;
                 }
             }
         }
 
         .mobile-nav-icon {
             display: flex;
+            padding-left: 10%;
+            font-size: 20px;
 
             @include media-up(md) {
                 display: none;
             }
 
-            color: $maincolor;
+            color: $paragraphs;
             cursor: pointer;
 
             &:hover {

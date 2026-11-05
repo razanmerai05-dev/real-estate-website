@@ -1,12 +1,13 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0 ;
+    margin: 0 ;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: $maincolor;
     font-family: cairo;
+
 }
 
 a {
@@ -24,7 +25,7 @@ img {
 .title-section {
     font-size: 30px;
     
-    color: $maincolor;
+    color: $secondaryColor;
     text-align: center;
     width: fit-content;
     position: relative;
@@ -35,7 +36,7 @@ img {
         content: "";
         width: 70px;
         height: 3px;
-        background-color: $maincolor;
+        background-color: $secondaryColor;
         right: -80px;
         top: 50%;
     }
@@ -45,7 +46,7 @@ img {
         content: "";
         width: 70px;
         height: 3px;
-        background-color: $maincolor;
+        background-color: $secondaryColor;
         left: -80px;
         top: 50%;
     }
