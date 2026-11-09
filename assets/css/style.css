@@ -2859,7 +2859,7 @@ aside .mobile-menu .cta {
 }
 @media (min-width: 1536px) {
   .testmonials .testimonial-card {
-    width: 500px;
+    width: 400px;
     padding: 70px 25px 25px 25px;
   }
 }
