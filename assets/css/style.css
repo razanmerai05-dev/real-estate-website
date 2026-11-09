@@ -125,7 +125,7 @@ img {
 }
 @media (min-width: 1200px) {
   .footer {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 }
 .footer.footer::before {
@@ -2822,7 +2822,7 @@ aside .mobile-menu .cta {
 @media (min-width: 1536px) {
   .testmonials .testimonials-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
   }
 }
 .testmonials .testimonial-card {
