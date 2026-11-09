@@ -130,7 +130,7 @@ img {
 }
 @media (min-width: 1536px) {
   .footer {
-    padding-bottom: 120px;
+    padding-bottom: 100px;
   }
 }
 .footer.footer::before {
@@ -2866,7 +2866,7 @@ aside .mobile-menu .cta {
 }
 @media (min-width: 1536px) {
   .testmonials .testimonial-card {
-    width: 450px;
+    width: 350px;
     padding: 50px 25px 25px 25px;
   }
 }
