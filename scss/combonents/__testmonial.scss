@@ -62,7 +62,7 @@
 
         @include media-up(xxxl) {
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 25px;
         }
     }
 
@@ -97,7 +97,7 @@
 
         @include media-up(xxxl) {
             width: 500px;
-            padding: 70px 25px 25px 25px;
+            padding: 50px 25px 25px 25px;
         }
     }
 
