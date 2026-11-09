@@ -12,10 +12,12 @@
 
 
     }
+
     @include media-up(xxl) {
         padding-bottom: 85px;
 
     }
+
     @include media-up(xxxl) {
         padding-bottom: 120px;
 
@@ -31,15 +33,16 @@
 
         @include media-up(xl) {
 
-            background-image: url(/assets/images/3-removebg-preview.png);
+            background-image: url('../images/3-removebg-preview.png');
             background-position: end;
             background-size: cover;
             background-repeat: no-repeat;
         }
-          @include media-up(xxxl){
-                    background-position: end;
 
-                }
+        @include media-up(xxxl) {
+            background-position: end;
+
+        }
 
         opacity: 1;
         z-index: -1;
@@ -72,20 +75,30 @@
             justify-content: center;
             align-items: center;
             gap: 25px;
-                  @include media-up(xxl){
-                    gap: 40px;
-                }
-                  @include media-up(xxxl){
-                    gap: 50px;
-                }
+
+            @include media-up(lg) {
+                gap: 30px;
+            }
+            @include media-up(xxl) {
+                gap: 40px;
+            }
+
+            @include media-up(xxxl) {
+                gap: 50px;
+            }
 
             a {
                 color: $linkColor;
                 width: 12px;
-                @include media-up(xxl){
+
+                @include media-up(lg) {
+                    width: 18px;
+                }
+                @include media-up(xxl) {
                     width: 15px;
                 }
-                @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 20px;
                 }
 
@@ -95,10 +108,15 @@
                 color: $secondaryColor;
                 font-size: 12px;
                 font-family: cairo;
-                 @include media-up(xxl){
+
+                @include media-up(lg) {
+                    font-size: 18px;
+                }
+                @include media-up(xxl) {
                     font-size: 15px;
                 }
-                 @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 20px;
                 }
             }
@@ -106,13 +124,19 @@
             i {
                 font-size: 25px;
                 color: $linkColor;
-                  @include media-up(xxl){
-                    font-size: 35px;
-                    
+
+                @include media-up(lg) {
+                    font-size: 30px;
+
                 }
-                  @include media-up(xxxl){
+                @include media-up(xxl) {
+                    font-size: 35px;
+
+                }
+
+                @include media-up(xxxl) {
                     font-size: 45px;
-                    
+
                 }
 
             }
@@ -154,6 +178,7 @@
         }
 
         gap: 15px;
+
         @include media-up(md) {
             div:nth-child(2) {
                 margin-top: 80px;
@@ -164,20 +189,25 @@
             div:nth-child(2) {
                 margin-top: 30px;
             }
+
             div:nth-child(3) {
                 margin-top: 30px;
             }
+
             div:nth-child(4) {
                 margin-top: 30px;
             }
         }
+
         @include media-up(xxxl) {
             div:nth-child(2) {
                 margin-top: 40px;
             }
+
             div:nth-child(3) {
                 margin-top: 40px;
             }
+
             div:nth-child(4) {
                 margin-top: 40px;
             }
@@ -185,12 +215,14 @@
 
         .footer-box {
 
-            @include media-up(xxxl){
+            @include media-up(xxxl) {
                 padding-top: 50px;
             }
+
             img {
                 width: 150px;
-                  @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     width: 250px;
                 }
             }
@@ -200,7 +232,8 @@
                 margin-bottom: 10px;
                 font-family: cairo;
                 font-size: 18px;
-                  @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 25px;
                 }
             }
@@ -210,7 +243,8 @@
                 font-size: 14px;
                 width: 85%;
                 margin-bottom: 10px;
-                @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 20px;
                     margin-bottom: 20px;
                 }
@@ -220,7 +254,8 @@
                 padding-bottom: 5px;
                 font-size: 12px;
                 transition: 0.3s;
-                  @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 28px;
                     padding-bottom: 10px;
                 }
@@ -234,7 +269,8 @@
             a {
                 color: $linkColor;
                 font-size: 15px;
-                  @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     font-size: 20px;
                 }
             }
@@ -243,7 +279,8 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                  @include media-up(xxxl){
+
+                @include media-up(xxxl) {
                     gap: 22px;
                     padding-top: 15px;
                 }
@@ -253,7 +290,8 @@
                     outline: none;
                     border-radius: 5px;
                     padding: 10px;
-                     @include media-up(xxxl){
+
+                    @include media-up(xxxl) {
                         padding: 15px;
                         font-size: 20px;
                     }
@@ -261,7 +299,8 @@
 
                 button {
                     border: none;
-                    @include media-up(xxxl){
+
+                    @include media-up(xxxl) {
                         font-size: 20px;
                     }
                 }
@@ -275,9 +314,10 @@
                     cursor: pointer;
                     transition: 0.3s;
                     color: $linkColor !important;
-                      @include media-up(xxxl){
-                    font-size: 35px;
-                }
+
+                    @include media-up(xxxl) {
+                        font-size: 35px;
+                    }
 
                     &:hover {
                         scale: 1.05;

@@ -143,7 +143,7 @@ img {
 }
 @media (min-width: 992px) {
   .footer.footer::before {
-    background-image: url(/assets/images/3-removebg-preview.png);
+    background-image: url("../images/3-removebg-preview.png");
     background-position: end;
     background-size: cover;
     background-repeat: no-repeat;
@@ -190,6 +190,11 @@ img {
   align-items: center;
   gap: 25px;
 }
+@media (min-width: 700px) {
+  .footer .conatact .inner-contact {
+    gap: 30px;
+  }
+}
 @media (min-width: 1200px) {
   .footer .conatact .inner-contact {
     gap: 40px;
@@ -203,6 +208,11 @@ img {
 .footer .conatact .inner-contact a {
   color: #e09c25;
   width: 12px;
+}
+@media (min-width: 700px) {
+  .footer .conatact .inner-contact a {
+    width: 18px;
+  }
 }
 @media (min-width: 1200px) {
   .footer .conatact .inner-contact a {
@@ -219,6 +229,11 @@ img {
   font-size: 12px;
   font-family: cairo;
 }
+@media (min-width: 700px) {
+  .footer .conatact .inner-contact h5 {
+    font-size: 18px;
+  }
+}
 @media (min-width: 1200px) {
   .footer .conatact .inner-contact h5 {
     font-size: 15px;
@@ -232,6 +247,11 @@ img {
 .footer .conatact .inner-contact i {
   font-size: 25px;
   color: #e09c25;
+}
+@media (min-width: 700px) {
+  .footer .conatact .inner-contact i {
+    font-size: 30px;
+  }
 }
 @media (min-width: 1200px) {
   .footer .conatact .inner-contact i {
