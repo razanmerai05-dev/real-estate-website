@@ -2829,7 +2829,7 @@ aside .mobile-menu .cta {
 @media (min-width: 1536px) {
   .testmonials .testimonials-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 20px;
   }
 }
 .testmonials .testimonial-card {
