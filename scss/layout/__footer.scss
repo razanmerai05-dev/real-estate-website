@@ -1,10 +1,25 @@
 .footer {
     // @include bg-img(url('/assets/images/bg-footer.png'));
     opacity: 1;
-    padding-bottom: 50px;
-    background-color: #1b2738dc;
+    padding-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.904);
     border-top: 3px solid $linkColor;
     position: relative;
+
+    @include media-up(xl) {
+        background-color: rgba(0, 0, 0, 0.623);
+        padding-bottom: 0;
+
+
+    }
+    @include media-up(xxl) {
+        padding-bottom: 85px;
+
+    }
+    @include media-up(xxxl) {
+        padding-bottom: 120px;
+
+    }
 
     &.footer::before {
         position: absolute;
@@ -13,10 +28,19 @@
         left: 0;
         bottom: 0;
         content: "";
-        background-image: url(../images/bg-footer.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+
+        @include media-up(xl) {
+
+            background-image: url(/assets/images/3-removebg-preview.png);
+            background-position: end;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+          @include media-up(xxxl){
+                    background-position: end;
+
+                }
+
         opacity: 1;
         z-index: -1;
     }
@@ -25,15 +49,21 @@
         @include flixbox();
         gap: 20px;
         flex-wrap: wrap;
-        background-color: white;
+        background-color: $backgroundColor;
         padding-top: 15px;
         padding-bottom: 15px;
-        margin-bottom: 50px;
+        margin-bottom: 18px;
         border-radius: 0 0 40px 40px;
 
         @include media-up(md) {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-up(xl) {
+
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 50px;
         }
 
         .inner-contact {
@@ -41,21 +71,49 @@
             flex-direction: row-reverse;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-
+            gap: 25px;
+                  @include media-up(xxl){
+                    gap: 40px;
+                }
+                  @include media-up(xxxl){
+                    gap: 50px;
+                }
 
             a {
                 color: $linkColor;
+                width: 12px;
+                @include media-up(xxl){
+                    width: 15px;
+                }
+                @include media-up(xxxl){
+                    font-size: 20px;
+                }
 
             }
 
             h5 {
-                color: $maincolor;
+                color: $secondaryColor;
+                font-size: 12px;
+                font-family: cairo;
+                 @include media-up(xxl){
+                    font-size: 15px;
+                }
+                 @include media-up(xxxl){
+                    font-size: 20px;
+                }
             }
 
             i {
-                font-size: 40px;
+                font-size: 25px;
                 color: $linkColor;
+                  @include media-up(xxl){
+                    font-size: 35px;
+                    
+                }
+                  @include media-up(xxxl){
+                    font-size: 45px;
+                    
+                }
 
             }
 
@@ -64,45 +122,108 @@
         div:nth-child(2) {
             @include media-up(md) {
                 border-right: 1px solid #d3b36ac9;
-                border-left: 1px solid #d3b36ac9;
             }
 
+            @include media-up(xl) {
+                border-left: 1px solid #d3b36ac9;
+
+
+                border-right: 1px solid #d3b36ac9;
+                padding-right: 15px;
+            }
+        }
+
+        div:nth-child(3) {
             border-right: 1px solid #d3b36ac9;
             padding-right: 15px;
+
+            @include media-up(md) {
+                border-right: 0;
+
+            }
         }
     }
 
     .inner-footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
+
+        @include media-up(xl) {
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        gap: 15px;
+        @include media-up(md) {
+            div:nth-child(2) {
+                margin-top: 80px;
+            }
+        }
+
+        @include media-up(xl) {
+            div:nth-child(2) {
+                margin-top: 30px;
+            }
+            div:nth-child(3) {
+                margin-top: 30px;
+            }
+            div:nth-child(4) {
+                margin-top: 30px;
+            }
+        }
+        @include media-up(xxxl) {
+            div:nth-child(2) {
+                margin-top: 40px;
+            }
+            div:nth-child(3) {
+                margin-top: 40px;
+            }
+            div:nth-child(4) {
+                margin-top: 40px;
+            }
+        }
 
         .footer-box {
 
+            @include media-up(xxxl){
+                padding-top: 50px;
+            }
             img {
                 width: 150px;
+                  @include media-up(xxxl){
+                    width: 250px;
+                }
             }
 
             h3 {
                 color: $secondaryColor;
-                // background: linear-gradient(135deg, #a37e2a 0%, #dbb46f 50%, #f4de9c 100%);
-                // -webkit-background-clip: text;
-                // -webkit-text-fill-color: transparent;
                 margin-bottom: 10px;
                 font-family: cairo;
-                font-size: 22px;
+                font-size: 18px;
+                  @include media-up(xxxl){
+                    font-size: 25px;
+                }
             }
 
             p {
                 color: $linkColor;
                 font-size: 14px;
                 width: 85%;
+                margin-bottom: 10px;
+                @include media-up(xxxl){
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
             }
 
             li {
-                padding-bottom: 15px;
-                font-size: 18px;
+                padding-bottom: 5px;
+                font-size: 12px;
                 transition: 0.3s;
+                  @include media-up(xxxl){
+                    font-size: 28px;
+                    padding-bottom: 10px;
+                }
 
                 &:hover {
                     color: darken($linkColor, 10%);
@@ -112,23 +233,37 @@
 
             a {
                 color: $linkColor;
-                font-size: 20px;
+                font-size: 15px;
+                  @include media-up(xxxl){
+                    font-size: 20px;
+                }
             }
 
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                  @include media-up(xxxl){
+                    gap: 22px;
+                    padding-top: 15px;
+                }
 
                 input {
                     border: none;
                     outline: none;
                     border-radius: 5px;
                     padding: 10px;
+                     @include media-up(xxxl){
+                        padding: 15px;
+                        font-size: 20px;
+                    }
                 }
 
                 button {
                     border: none;
+                    @include media-up(xxxl){
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -136,10 +271,13 @@
                 padding-top: 20px;
 
                 i {
-                    font-size: 30px;
+                    font-size: 25px;
                     cursor: pointer;
                     transition: 0.3s;
                     color: $linkColor !important;
+                      @include media-up(xxxl){
+                    font-size: 35px;
+                }
 
                     &:hover {
                         scale: 1.05;

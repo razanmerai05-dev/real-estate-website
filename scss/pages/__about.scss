@@ -1,208 +1,341 @@
-// .about {
-//     padding: 50px 0;
+.about {
+    padding: 60px 0;
 
-//     .inner-about {
-//         @include media-up(md) {
-//             @include flixbox();
-//         }
+    .inner-about {
+        @include media-up(md) {
+            @include flixbox(start);
+            // gap: 10px;
 
-//         .right-about {
-//             @include media-up(md) {
-//                 width: 50%;
-//             }
+        }
 
-//             h2,
-//             h4 {
-//                 transition: opacity 0.5s ease-in-out;
-//                 opacity: 1;
-//             }
+        @include media-up(lg) {
+            display: flex;
+            justify-content: space-around;
 
-//             h2 {
+        }
 
-//                 color: $secondaryColor;
-//                 font-family: cairo;
-//                 margin-bottom: 22px;
-//                 font-size: 30px;
-//             }
-
-//             h4 {
-//                 color: $linkColor;
-//                 font-family: cairo;
-//                 font-size: 20px;
-//             }
-
-//             p {
-//                 font-family: cairo;
-//                 color: $paragraphs;
-//                 margin-bottom: 10px;
-
-//                 @include media-up(md) {
-//                     width: 80%;
-//                 }
-//             }
-
-//             button {
-//                 transition: 0.3s;
-//                 @include flixbox();
-//                 text-align: center;
-//                 border: none;
-//                 padding-right: 25px;
-//                 padding-left: 25px;
-//                 font-size: 18px;
-//                 transition: 0.3s;
-
-//                 .btn-icon {
-//                     padding-right: 10px;
-//                     transform: translateY(20%);
-//                     transition: 0.3s;
-//                 }
-//             }
-
-//             button:hover {
-//                 .btn-icon {
-//                     padding-right: 15px;
-//                 }
+        .right-about {
+            @include media-up(md) {
+                width: 50%;
+            }
+            @include media-up(xxxl) {
+                width: 50%;
+            }
+            
 
 
-//             }
-//         }
+            h2,
+            h4 {
+                transition: opacity 0.5s ease-in-out;
+                opacity: 1;
 
-//         .left-about {
-//             // margin-top: 20px;
+            }
 
-//             // @include media-up(md) {
-//             //     width: 50%;
-//             // }
+            h2 {
 
-//             // img {
-//             //     max-width: 100%;
-//             //     border-radius: 20px;
-//             //     transition: opacity 0.5s ease-in-out;
-//             //     opacity: 1;
+                color: $secondaryColor;
+                font-family: cairo;
+                margin-bottom: 10px;
+                font-size: 15px;
+                @include media-up(xxl){
+                    font-size: 18px;
+                }
+                @include media-up(xxxl) {
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+            }
 
-//             // }
-//             /* إعدادات الحاوية العامة */
+            h4 {
+                color: $linkColor;
+                font-family: cairo;
+                font-size: 13px;
+                margin-bottom: 5px;
 
+                @include media-up(md) {
+                    font-size: 12px;
+                }
+                 @include media-up(xxl){
+                    font-size: 15px;
+                }
 
-//             .diamond-gallery-container {
-//                 position: relative;
-//                 width: 420px;
-//                 height: 420px;
-//                 display: grid;
-//                 grid-template-columns: repeat(3, 1fr);
-//                 grid-template-rows: repeat(3, 1fr);
-//                 justify-items: center;
-//                 align-items: center;
-//             }
+                @include media-up(xxxl) {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+            }
 
-//             /* تنسيق العناصر المعينية الأساسية */
-//             .diamond-item {
-//                 position: absolute;
-//                 width: 170px;
-//                 height: 170px;
-//                 transform: rotate(45deg);
-//                 /* تدوير المربع ليصبح معيناً */
-//                 overflow: hidden;
-//                 border-radius: 24px;
-//                 /* انحناء الزوايا بشكل ناعم وجميل */
-//                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-//                 border: 3px solid rgba(255, 255, 255, 0.15);
-//                 transition: transform 0.4s ease, border-color 0.4s ease;
-//             }
+            p {
+                font-size: 12px;
+                font-family: cairo;
+                color: $paragraphs;
+                margin-bottom: 10px;
 
-//             /* عكس تدوير الصورة داخل المعين لتعود لزاوية 0 وتظهر بشكل صحيح */
-//             .diamond-item img {
-//                 width: 240px;
-//                 height: 240px;
-//                 object-fit: cover;
-//                 transform: rotate(-45deg) scale(1.2);
-//                 /* تعويض زاوية الدوران وملء المساحة */
-//                 position: absolute;
-//                 top: -35px;
-//                 left: -35px;
-//                 transition: transform 0.5s ease;
-//             }
+                @include media-up(md) {
+                    width: 100%;
 
-//             /* تأثيرات التفاعل (Hover) */
-//             .diamond-item:hover {
-//                 transform: rotate(45deg) scale(1.05);
-//                 border-color: $linkColor;
-//                 /* لمسة ذهبية خفيفة عند المرور */
-//                 z-index: 10;
-//             }
+                }
+                @include media-up(xxl) {
+                  font-size: 14px;
 
-//             .diamond-item:hover img {
-//                 transform: rotate(-45deg) scale(1.3);
-//             }
+                }
 
-//             /* توزيع المواقع بدقة لتتداخل معاً مثل الصورة */
-//             .diamond-item.top {
-//                 top: 0;
-//                 left: 50%;
-//                 transform: translateX(-50%) rotate(45deg);
-//             }
+                @include media-up(xxxl) {
+                    width: 80%;
+                    font-size: 18px;
+                }
+            }
 
-//             .diamond-item.top:hover {
-//                 transform: translateX(-50%) rotate(45deg) scale(1.05);
-//             }
+            button {
+                transition: 0.3s;
+                @include flixbox();
+                text-align: center;
+                border: none;
+                padding-right: 25px;
+                padding-left: 25px;
+                font-size: 12px;
+                transition: 0.3s;
 
-//             .diamond-item.left {
-//                 top: 50%;
-//                 left: 0;
-//                 transform: translateY(-50%) rotate(45deg);
-//             }
+                @include media-up(xxxl) {
+                    margin-top: 25px;
+                    font-size: 20px;
+                }
 
-//             .diamond-item.left:hover {
-//                 transform: translateY(-50%) rotate(45deg) scale(1.05);
-//             }
+                .btn-icon {
+                    padding-right: 10px;
+                    transform: translateY(20%);
+                    transition: 0.3s;
+                }
+            }
 
-//             .diamond-item.right {
-//                 top: 50%;
-//                 right: 0;
-//                 transform: translateY(-50%) rotate(45deg);
-//             }
-
-//             .diamond-item.right:hover {
-//                 transform: translateY(-50%) rotate(45deg) scale(1.05);
-//             }
-
-//             .diamond-item.bottom {
-//                 bottom: 0;
-//                 left: 50%;
-//                 transform: translateX(-50%) rotate(45deg);
-//             }
-
-//             .diamond-item.bottom:hover {
-//                 transform: translateX(-50%) rotate(45deg) scale(1.05);
-//             }
-
-//             /* أيقونة المنتصف الفاخرة */
-//             .center-badge {
-//                 position: absolute;
-//                 top: 50%;
-//                 left: 50%;
-//                 transform: translate(-50%, -50%) rotate(45deg);
-//                 width: 55px;
-//                 height: 55px;
-//                 background: $maincolor;
-//                 border: 2px solid $linkColor;
-//                 /* إطار ذهبي فاخر */
-//                 border-radius: 14px;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 z-index: 20;
-//                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-//             }
-
-//             /* إعادة ضبط اتجاه الأيقونة داخل الشعار لتكون مستقيمة */
-//             .center-badge i {
-//                 transform: rotate(-45deg);
-//                 color: #d4af37;
-//                 font-size: 20px;
-//             }
-//         }
+            button:hover {
+                .btn-icon {
+                    padding-right: 15px;
+                }
 
 
-//     }
-// }
+            }
+        }
+
+        .left-about {
+    
+
+            .diamond-gallery-container {
+                position: relative;
+                margin-top: 35px;
+                margin-right: 35px;
+
+                height: 250px;
+                width: 250px;
+                
+              
+
+                @include media-up(md) {
+
+                    width: 220px;
+                    height: 220px;
+                    margin-top: 0;
+                }
+                @include media-up(xxl) {
+
+                    width: 250px;
+                    height: 250px;
+                    margin-top: 0;
+                }
+
+                @include media-up(xxxl) {
+
+                    width: 420px;
+                    height: 420px;
+                    margin-top: 15px;
+                    margin-right: 0;
+                    
+                }
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                justify-items: center;
+                align-items: center;
+
+            
+
+
+            }
+
+            /* تنسيق العناصر المعينية الأساسية */
+            .diamond-item {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+
+                @include media-up(md) {
+
+                    width: 88px;
+                    height: 88px;
+                }
+                @include media-up(xxl) {
+
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include media-up(xxxl) {
+                    height: 170px;
+                    width: 170px;
+                }
+
+                transform: rotate(45deg);
+                /* تدوير المربع ليصبح معيناً */
+                overflow: hidden;
+                border-radius: 24px;
+                /* انحناء الزوايا بشكل ناعم وجميل */
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+                border: 3px solid rgba(255, 255, 255, 0.15);
+                transition: transform 0.4s ease,
+                border-color 0.4s ease;
+            }
+
+            /* عكس تدوير الصورة داخل المعين لتعود لزاوية 0 وتظهر بشكل صحيح */
+            .diamond-item img {
+
+                /* تعويض زاوية الدوران وملء المساحة */
+              
+                top: -50px;
+                left: 8px;
+                width: 210px;
+                height: 210px;
+
+                @include media-up(md) {
+
+                    width: 250px;
+                    height: 250px;
+                    top: -60px;
+                    left: 23px;
+                    
+                }
+                @include media-up(xxl) {
+
+                    width: 280px;
+                    height: 280px;
+                    top: -65px;
+                    left: 27px;
+                    
+                }
+
+                @include media-up(xxxl) {
+
+
+                    width: 300px;
+                    height: 300px;
+                    top: -70px;
+                    left: -2px;
+                
+                }
+                
+                object-fit: cover;
+                transform: rotate(-45deg) scale(1.2);
+                  position: absolute;
+
+
+                transition: transform 0.5s ease;
+                
+
+            }
+
+            /* تأثيرات التفاعل (Hover) */
+            .diamond-item:hover {
+                transform: rotate(45deg) scale(1.05);
+                border-color: $linkColor;
+                /* لمسة ذهبية خفيفة عند المرور */
+                z-index: 10;
+            }
+
+            .diamond-item:hover img {
+                transform: rotate(-45deg) scale(1.3);
+            }
+
+            /* توزيع المواقع بدقة لتتداخل معاً مثل الصورة */
+            .diamond-item.top {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            .diamond-item.top:hover {
+                transform: translateX(-50%) rotate(45deg) scale(1.05);
+            }
+
+            .diamond-item.left {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            .diamond-item.left:hover {
+                transform: translateY(-50%) rotate(45deg) scale(1.05);
+            }
+
+            .diamond-item.right {
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            .diamond-item.right:hover {
+                transform: translateY(-50%) rotate(45deg) scale(1.05);
+            }
+
+            .diamond-item.bottom {
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            .diamond-item.bottom:hover {
+                transform: translateX(-50%) rotate(45deg) scale(1.05);
+            }
+
+            /* أيقونة المنتصف الفاخرة */
+            .center-badge {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 44px;
+                height: 44px;
+
+                @include media-up(xxxl) {
+
+
+                    width: 55px;
+                    height: 55px;
+                }
+
+                background: $maincolor;
+                border: 2px solid $linkColor;
+                /* إطار ذهبي فاخر */
+                border-radius: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 20;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            }
+
+            /* إعادة ضبط اتجاه الأيقونة داخل الشعار لتكون مستقيمة */
+            .center-badge i {
+                transform: rotate(-45deg);
+                color: #d4af37;
+                font-size: 15px;
+
+                @include media-up(xxxl) {
+                    font-size: 20px;
+
+                }
+            }
+        }
+
+
+    }
+}
