@@ -1,5 +1,4 @@
 .footer {
-    // @include bg-img(url('/assets/images/bg-footer.png'));
     opacity: 1;
     padding-bottom: 25px;
     background-color: rgba(0, 0, 0, 0.904);
@@ -18,11 +17,7 @@
 
     }
 
-    // @include media-up(xxxl) {
-    //     padding-bottom: 80px;
-
-    // }
-
+    
     &.footer::before {
         position: absolute;
         top: 0;
@@ -105,7 +100,7 @@
             }
 
             h5 {
-                color: $secondaryColor;
+                color: #ffffffc9;
                 font-size: 12px;
                 font-family: cairo;
 
@@ -228,7 +223,7 @@
             }
 
             h3 {
-                color: $secondaryColor;
+                color: #ffffffc9;
                 margin-bottom: 10px;
                 font-family: cairo;
                 font-size: 18px;
@@ -290,7 +285,7 @@
                     outline: none;
                     border-radius: 5px;
                     padding: 10px;
-
+                    width: 75%;
                     @include media-up(xxxl) {
                         padding: 15px;
                         font-size: 20px;
@@ -299,7 +294,7 @@
 
                 button {
                     border: none;
-
+                    width: 75%;
                     @include media-up(xxxl) {
                         font-size: 20px;
                     }

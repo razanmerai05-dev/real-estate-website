@@ -1,7 +1,7 @@
 .real-estate-hero {
     position: relative;
     width: 100%;
-    height: 80vh; // ارتفاع السيكشن بالنسبة للشاشة
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,6 @@
     overflow: hidden;
     color: #fff;
 
-    // تنسيق الفيديو ليملاْ السيكشن تماماً بدون تشويه
     .hero-video {
         position: absolute;
         top: 50%;
@@ -30,11 +29,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.45); // يمكنك تعديل الشفافية حسب رغبتك
+        background: rgba(0, 0, 0, 0.45);
         z-index: 2;
     }
 
-    // تنسيق المحتوى ليكون فوق الفيديو والطبقة الشفافة
+
     .hero-content {
         position: relative;
         z-index: 3;
@@ -70,29 +69,33 @@
         flex-direction: column;
         gap: 20px;
 
-        @include media-up(md) {
-            gap: 20px;
+        @include media-up(lg) {
+            gap: 10px;
             display: flex;
             flex-direction: row;
         }
 
         .right-section {
-            background-color: white;
+            background-color: $backgroundColor;
             padding: 20px;
             border-radius: 6px;
             width: 100%;
 
-            @include media-up(md) {
-                width: 70%;
+            @include media-up(lg) {
+                width: 60%;
             }
 
             .image {
                 overflow: hidden;
                 border-radius: 6px;
                 width: 100%;
-                height: 600px;
+                height: 300px;
 
                 @include media-up(md) {
+                    height: 400px;
+                }
+
+                @include media-up(xxl) {
                     height: 900px;
                 }
 
@@ -106,41 +109,69 @@
             h2 {
                 color: $linkColor;
                 margin-top: 20px;
-                margin-bottom: 20px;
-                font-size: 28px;
+                margin-bottom: 10px;
+                font-size: 20px;
+
+                @include media-up(xxxl) {
+                    font-size: 25px;
+                    margin-bottom: 15px;
+                }
             }
 
             p {
-                color: $maincolor;
-                font-size: 18px;
+                color: $paragraphs;
+                font-size: 15px;
                 margin-bottom: 15px;
+
+                @include media-up(xxxl) {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
             }
 
             .propos {
+                margin-bottom: 25px;
                 display: flex;
                 flex-direction: column;
-                background-color: #f8f9fa;
+                background-color: #4d4d4d;
                 padding: 20px;
                 border-radius: 6px;
-                @include media-up(md){
+
+                @include media-up(md) {
                     display: flex;
                     flex-direction: row;
                 }
 
-                div:first-child {
-                    @include media-up(md){
+                @include media-up(lg) {
+                    display: flex;
+                    flex-direction: column;
+                }
 
-                        border-left: 1px solid #ccc;
+                div:first-child {
+                    @include media-up(md) {
+
+                        border-left: 1px solid #e09b25d0;
                     }
-                    
-                    
+
+                    @include media-up(lg) {
+
+                        border-left: 0;
+                    }
+
+
                 }
 
                 div:last-child {
-                    @include media-up(md){
+                    @include media-up(md) {
 
                         margin-right: 25px;
                     }
+
+                    @include media-up(lg) {
+
+                        margin-right: 0;
+                    }
+
                 }
 
                 div {
@@ -151,34 +182,64 @@
                         li {
                             position: relative;
                             margin-bottom: 10px;
-                            color: $maincolor;
-                            font-size: 18px;
+                            color: $paragraphs;
+                            font-size: 15px;
+
+                            @include media-up(lg) {
+                                font-size: 18px;
+                            }
+
+                            @include media-up(xxxl) {
+                                font-size: 20px;
+                                padding-right: 35px;
+                            }
 
                             &::after {
                                 position: absolute;
                                 content: ":";
-                                 left: -15%;
+                                left: -15%;
                                 font-size: 20px;
-                                @include media-up(md){
+
+                                @include media-up(md) {
                                     position: absolute;
                                     content: ":";
 
                                     left: 50%;
-                                    font-size: 20px;
+
                                 }
-                               
+
+                                @include media-up(lg) {
+                                    position: absolute;
+                                    content: ":";
+
+                                    left: 10%;
+
+                                }
+
+                                @include media-up(xxxl) {
+                                    font-size: 28px;
+                                }
+
+
                             }
 
                             span {
                                 position: absolute;
-                                 left: -100%;
-                                @include media-up(md){
+                                left: -100%;
+
+                                @include media-up(md) {
                                     position: absolute;
 
                                     left: 15%;
                                 }
-                               
-                                color: $maincolor
+
+                                @include media-up(lg) {
+                                    position: absolute;
+
+                                    left: -50%;
+                                }
+
+                                color: $paragraphs;
                             }
                         }
                     }
@@ -187,31 +248,33 @@
 
             .extra-props {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                grid-template-columns: repeat(1, 1fr);
 
-                @include media-up(md) {
-
-                    @include flixbox(space-between);
-                }
 
                 margin-bottom: 40px;
-                background-color: #f8f9fa;
+                background-color: #4d4d4d;
                 padding: 20px;
                 border-radius: 5px;
                 gap: 15px;
 
+                @include media-up(xxl) {
+
+                    @include flixbox(space-between);
+
+                }
+
                 .box {
-                    background-color: #222f42dc;
+                    background-color: #0c0c0cdc;
                     @include flixbox(center, center, column);
 
 
                     border-radius: 6px;
                     padding: 15px;
-                    box-shadow: 3px 3px 3px #222f42ad;
+                    box-shadow: 3px 3px 3px #0c0c0c88;
                     @include flixbox(center, center, column);
                     text-align: center;
 
-                    @include media-up(md) {
+                    @include media-up(xxl) {
                         width: 33%;
                         padding: 15px 0;
                     }
@@ -248,18 +311,30 @@
                 h2 {
 
                     text-align: center;
+
+                    @include media-up(xxxl) {
+                        padding-top: 20px;
+                    }
                 }
 
                 .swiper-slide {
                     border-radius: 6px;
                     overflow: hidden;
 
+
                     img {
                         height: 400px;
-                        @include media-up(md){
+
+                        @include media-up(md) {
 
                             height: 700px;
                         }
+
+                        @include media-up(xxxl) {
+
+                            height: 800px;
+                        }
+
                         width: 100%;
                         object-fit: contain;
                         border-radius: 6px;
@@ -270,38 +345,46 @@
 
                 .arow {
                     color: $secondaryColor;
-                    background-color: #1b2738c5;
+                    background-color: #1f1e1ecc;
                     padding: 5px;
                     font-size: 12px;
-                    width: 50px;
-                    height: 50px;
+                    width: 40px;
+                    height: 40px;
                     border-radius: 50%;
+
+                    @include media-up(xxxl) {
+                        font-size: 15px;
+                        width: 50px;
+                        height: 50px;
+                    }
                 }
             }
 
             .inner-props {
                 display: flex;
                 flex-direction: column;
-                @include media-up(md){
+                // padding-bottom: 30px;
+                 
 
-                   display: flex;
-                   flex-direction: row;
-                   justify-content: space-around;
-                     gap: 15px;
+                @include media-up(md) {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    gap: 15px;
                 }
-                
-                background-color: #f8f9fa;
+
+                background-color: #4d4d4d;
                 padding: 20px;
                 border-radius: 6px;
-                color: $maincolor;
-                font-size: 18px;
-                font-weight: 600;
-               
+
+
 
                 .box {
-                    @include media-up(md){
+                    @include media-up(md) {
                         width: 33%;
                     }
+
                     width: 100%;
 
                     ul {
@@ -309,18 +392,33 @@
                         li {
                             position: relative;
                             margin-bottom: 15px;
-                            margin-right: 25px;
-                            border-bottom: 1px dotted #222f4283;
+                            margin-right: 15px;
+                            border-bottom: 1px dotted #fff;
                             padding-bottom: 8px;
                             width: fit-content;
+                            color: $paragraphs;
+                            font-size: 15px;
+                            padding-right: 10px;
+
+                            @include media-up(lg) {
+                                font-size: 13px;
+                            }
+
+                            @include media-up(xxl) {
+                                font-size: 15px;
+                            }
+
+                            @include media-up(xxxl) {
+                                font-size: 20px;
+                            }
 
                             &::before {
                                 position: absolute;
                                 content: "\f00c";
                                 font-weight: bold;
                                 font-family: "Font Awesome 5 Free";
-                                width: 20px;
-                                height: 20px;
+                                width: 18px;
+                                height: 18px;
                                 border-radius: 50%;
                                 padding: 1px;
                                 color: #fff;
@@ -329,6 +427,16 @@
                                 transform: translateY(-50%);
                                 right: -25px;
                                 @include flixbox();
+
+                                @include media-up(lg) {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+
+                                @include media-up(xxxl) {
+                                    width: 20px;
+                                    height: 20px;
+                                }
                             }
                         }
                     }
@@ -336,12 +444,13 @@
             }
 
             .all-img {
+                padding-bottom: 25px;
                 display: grid;
-                gap: 30px;
+                gap: 20px;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
                 @include media-up(md) {
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    grid-template-columns: repeat(2, 1fr);
 
                 }
 
@@ -364,9 +473,11 @@
                 }
             }
 
+
             .img-vedio {
                 margin-top: 20px;
                 margin-bottom: 20px;
+
                 img {
                     width: 100%;
                     border-radius: 6px;
@@ -375,13 +486,13 @@
             }
 
             form {
-                background-color: #f8f9fa;
+                background-color: #4d4d4d;
                 border-radius: 6px;
                 padding: 20px;
                 width: 100%;
 
                 .info-input {
-                    display: flex;
+
                     gap: 15px;
 
                     div {
@@ -391,19 +502,25 @@
                 }
 
                 label {
-                    color: $maincolor;
+                    color: $paragraphs;
+                    font-size: 13px;
+                    margin-bottom: 8px;
+                    @include media-up(xxxl){
+                        font-size: 20px;
+                    }
                 }
 
                 input {
                     padding: 10px;
                     border-radius: 6px;
-                    border: 1px solid #d3b36aa8;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
                     width: 100%;
                     @include flixbox(center, center, column);
                     margin-bottom: 15px;
+                    margin-top: 10px;
 
                     &:focus {
-                        outline: 1px solid #dad8d8;
+                        outline: 1px solid $linkColor;
                     }
                 }
 
@@ -422,7 +539,10 @@
 
                 button {
                     border: 0;
-                    font-size: 18px;
+                    font-size: 13px;
+                    @include media-up(xxxl){
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -436,23 +556,27 @@
             padding-bottom: 30px;
             width: 100%;
 
-            @include media-up(md) {
-                width: 30%;
+            @include media-up(lg) {
+                width: 40%;
             }
 
             form {
                 @include flixbox(start, start, column);
 
                 label {
-                    font-size: 18px;
+                    font-size: 15px;
                     font-weight: 600;
-                    color: $maincolor;
+                    color: $paragraphs;
+                    @include media-up(xxxl){
+                        font-size: 20px;
+                    }
                 }
 
                 div {
                     position: relative;
                     overflow: hidden;
                     width: 100%;
+                  
 
                     input {
                         padding: 10px;
@@ -461,7 +585,11 @@
                         width: 100%;
                         @include flixbox(center, center, column);
                         margin-bottom: 20px;
+                        margin-top: 10px;
                         overflow: hidden;
+                       
+
+
 
                         &:focus {
                             outline: 1px solid #d3b36aa8;
@@ -474,13 +602,14 @@
                         position: absolute;
                         left: -450px;
 
-                        @include media-up(md) {
-                            left: -300px;
+                        top: 20px;
+                        @include media-up(xxxl) {
+                            top: 28px;
+                            left: -480px;
 
                         }
 
                         transform: translateY(-50%);
-                        top: 20px;
                         color: $maincolor;
                         cursor: pointer;
 
@@ -498,8 +627,12 @@
             h4 {
                 color: $linkColor;
                 margin-top: 10px;
-                font-size: 20px;
+                font-size: 15px;
                 font-weight: bold;
+                @include media-up(xxxl){
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
             }
 
             .input-option {
@@ -510,10 +643,14 @@
                     display: flex;
                     align-items: center;
                     gap: 5px;
+                   
 
                     label {
-                        color: $maincolor;
+                        color: #ffffffc9;
                         font-weight: 600;
+                        @include media-up(xxxl){
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -523,13 +660,14 @@
                 display: flex;
                 flex-direction: column;
 
+
                 label {
                     color: $linkColor;
                     font-weight: bold;
 
                     span {
                         margin-right: 10px;
-                        color: $maincolor;
+                        color: $paragraphs;
 
 
                     }
@@ -569,20 +707,33 @@
                 margin-top: 25px;
                 margin-bottom: 25px;
                 @include flixbox(center, center, column);
-                gap: 20px;
+                gap: 15px;
                 border: 1px solid #d3b36a8a;
                 border-radius: 6px;
                 padding: 20px;
 
+
                 h4 {
                     display: flex;
                     align-items: start !important;
+
+                    @include media-up(md) {
+                        font-size: 18px;
+                    }
+                    @include media-up(xxxl) {
+                        font-size: 20px;
+                    }
                 }
 
                 .image {
                     margin-top: 10px;
                     width: 200px;
                     height: 200px;
+                    @include media-up(xxxl){
+                        width: 250px;
+                        height: 250px;
+
+                    }
 
                     img {
                         border-radius: 50%;
@@ -593,22 +744,37 @@
                 }
 
                 p {
-                    color: $maincolor;
-                    font-size: 20px;
+                    color: #ffffffc9;
+                    font-size: 15px;
                     font-weight: bold;
+
+                    @include media-up(md) {
+                        font-size: 18px;
+                    }
+                    @include media-up(xxxl) {
+                        font-size: 20px;
+                    }
                 }
 
                 .icons {
 
                     i {
-                        font-size: 30px;
+                        font-size: 20px;
                         cursor: pointer;
                         transition: 0.3s;
                         color: $linkColor ;
 
+                        @include media-up(md) {
+                            font-size: 25px;
+                        }
+                        
+                        @include media-up(xxxl) {
+                            font-size: 30px;
+                        }
+
                         &:hover {
                             scale: 1.05;
-                            color: $maincolor;
+                            color: $paragraphs;
                         }
                     }
 
@@ -636,7 +802,11 @@
 
             button {
                 border: 0;
-                font-size: 18px;
+                font-size: 15px;
+                @include media-up(xxxl){
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
             }
 
 
