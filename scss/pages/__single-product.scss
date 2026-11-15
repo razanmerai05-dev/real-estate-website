@@ -587,7 +587,12 @@
                         margin-bottom: 20px;
                         margin-top: 10px;
                         overflow: hidden;
-                       
+                       @include media-up(md){
+                        width: 80%;
+                       }
+                       @include media-up(lg){
+                        width: 100%;
+                       }
 
 
 
@@ -603,6 +608,7 @@
                         left: -450px;
 
                         top: 20px;
+                        
                         @include media-up(xxxl) {
                             top: 28px;
                             left: -480px;

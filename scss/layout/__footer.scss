@@ -286,6 +286,9 @@
                     border-radius: 5px;
                     padding: 10px;
                     width: 75%;
+                    @include media-up(xl){
+                        width: 100%;
+                    }
                     @include media-up(xxxl) {
                         padding: 15px;
                         font-size: 20px;
@@ -295,6 +298,9 @@
                 button {
                     border: none;
                     width: 75%;
+                     @include media-up(xl){
+                        width: 100%;
+                    }
                     @include media-up(xxxl) {
                         font-size: 20px;
                     }
