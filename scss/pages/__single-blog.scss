@@ -28,11 +28,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.45); // يمكنك تعديل الشفافية حسب رغبتك
+        background: rgba(0, 0, 0, 0.45); 
         z-index: 2;
     }
 
-    // تنسيق المحتوى ليكون فوق الفيديو والطبقة الشفافة
     .hero-content {
         position: relative;
         z-index: 3;
@@ -40,19 +39,57 @@
         padding: 0 20px;
 
         h1 {
-            font-size: 3rem;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
 
-            @media (max-width: 768px) {
-                font-size: 2rem;
-            }
+               @include media-up(md) {
+            font-size: 22px !important;
+            margin-bottom: 20px !important;
+
+        }
+
+        @include media-up(lg) {
+            font-size: 30px !important;
+            margin-bottom:25px !important;
+
+        }
+        @include media-up(xxl) {
+            font-size: 38px !important;
+            margin-bottom:20px !important;
+
+        }
+
+        @include media-up(xxxl) {
+            font-size: 40px !important;
+            margin-bottom: 25px !important;
+
+        }
         }
 
         p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+            font-size: 15px;
+            margin-bottom: 12px;
             opacity: 0.9;
+            
+        @include media-up(md) {
+            font-size: 20px !important;
+            margin-bottom: 28px !important;
+        }
+
+        @include media-up(lg) {
+            font-size: 22px !important;
+            margin-bottom: 25px !important;
+        }
+        @include media-up(xxl) {
+            font-size: 25px !important;
+            margin-bottom: 25px !important;
+        }
+
+        @include media-up(xxxl) {
+            font-size: 28px !important;
+            margin-bottom: 30px !important;
+        }
         }
 
     }
@@ -151,7 +188,7 @@
                         width: 15px;
                         height: 15px;
                         border-radius: 50%;
-                        padding: 2px;
+                        padding: 3px;
                         color: #fff;
                         background-color: $linkColor;
                         top: 50%;
@@ -162,7 +199,8 @@
                         @include media-up(xxxl) {
                             width: 20px;
                             height: 20px;
-                            margin-right: 20px
+                           
+                            margin-right: 20px;
                         }
                     }
                 }

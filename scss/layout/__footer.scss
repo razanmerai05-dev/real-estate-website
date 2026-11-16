@@ -1,17 +1,18 @@
 .footer {
     opacity: 1;
     padding-bottom: 25px;
-    background-color: rgba(0, 0, 0, 0.904);
+    // background-color: rgba(0, 0, 0, 0.904);
     border-top: 3px solid $linkColor;
     position: relative;
 
+    background-color: rgba(0, 0, 0, 0.795);
     @include media-up(xl) {
-        background-color: rgba(0, 0, 0, 0.623);
+        background-color: rgba(0, 0, 0, 0.479);
         padding-bottom: 0;
-
-
     }
 
+
+ 
     @include media-up(xxl) {
         padding-bottom: 50px;
 
@@ -26,7 +27,12 @@
         bottom: 0;
         content: "";
 
+        background-image: url(../images/footer\ bg\ mobail.jpg);
+        background-position: end;
+        background-size: cover;
+        background-repeat: no-repeat;
         @include media-up(xl) {
+
 
             background-image: url(../images/3-removebg-preview.png);
             background-position: end;

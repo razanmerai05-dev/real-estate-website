@@ -1,174 +1,290 @@
-.hero {
+
+
+.hero-info {
+    @include flixbox(center, center, column);
     position: relative;
+    z-index: 10000;
     width: 100%;
-    height: 90vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    // z-index: 1;
+    object-fit: cover;
 
-    @include bg-img(url(../images/p7.jpg));
+    margin-bottom: 10px;
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.637);
+    @include media-up(md) {
+
+        margin-bottom: 20px;
+    }
+    @include media-up(xl) {
+        left: 40%;
+        margin-bottom: 30px;
+    }
+    @include media-up(xxl) {
+        left: 30%;
+        margin-bottom: 35px;
+    }
+    @include media-up(xxxl) {
+        left: 25%;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+       
+        font-size: 18px !important;
+        font-family: cairo;
+        margin-bottom: 10px !important;
+        color: $secondaryColor;
+
+        @include media-up(md) {
+            font-size: 22px !important;
+            margin-bottom: 20px !important;
+
+        }
+
+        @include media-up(lg) {
+            font-size: 30px !important;
+            margin-bottom:25px !important;
+
+        }
+        @include media-up(xxl) {
+            font-size: 38px !important;
+            margin-bottom:20px !important;
+
+        }
+
+        @include media-up(xxxl) {
+            font-size: 40px !important;
+            margin-bottom: 25px !important;
+
+        }
 
     }
 
-    .hero-info {
-        @include flixbox(center, center, column);
-        position: relative;
-        z-index: 10000;
-        width: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: auto;
-        z-index: 1;
-        object-fit: cover;
+    p {
+        font-size: 13px !important;
+        font-family: cairo;
+        font-weight: 600;
+        margin-bottom: 12px !important;
+        // opacity: 0.9;
+        color: $linkColor;
 
-        margin-bottom: 10px;
-
-        h1 {
-            font-size: 15px;
-            font-family: cairo;
-            margin-bottom: 5px;
-            color: $secondaryColor;
-
-            @include media-up(md) {
-                font-size: 20px;
-                margin-bottom: 10px;
-
-            }
-
-            @include media-up(lg) {
-                font-size: 25px;
-                margin-bottom: 15px;
-
-            }
-
-            @include media-up(xxxl) {
-                font-size: 45px;
-                margin-bottom: 25px;
-
-            }
-
+        @include media-up(md) {
+            font-size: 20px !important;
+            margin-bottom: 28px !important;
         }
 
-        p {
-            font-size: 12px;
-            font-family: cairo;
-            font-weight: 600;
-            opacity: 0.9;
-            color: $linkColor;
-
-            @include media-up(md) {
-                font-size: 15px;
-                margin-bottom: 10px
-            }
-
-            @include media-up(lg) {
-                font-size: 20px;
-                margin-bottom: 15px
-            }
-
-            @include media-up(xxxl) {
-                font-size: 25px;
-                margin-bottom: 30px
-            }
+        @include media-up(lg) {
+            font-size: 22px !important;
+            margin-bottom: 25px !important;
+        }
+        @include media-up(xxl) {
+            font-size: 25px !important;
+            margin-bottom: 25px !important;
         }
 
-        .hero-search {
-            @include flixbox();
-            flex-wrap: wrap;
-            margin-top: 10px;
-            gap: 5px;
-            background-color: #121212c9;
-            padding: 5px;
-            border-radius: 3px;
-            border: 1px solid $paragraphs;
+        @include media-up(xxxl) {
+            font-size: 28px !important;
+            margin-bottom: 30px !important;
+        }
+    }
+
+    .hero-search {
+        @include flixbox();
+        flex-wrap: wrap;
+
+        @include media-up(lg) {
+            flex-wrap: nowrap;
+        }
+
+        background-color: #121212c9;
+        padding: 5px;
+        border-radius: 20px;
+        border: 1px solid $paragraphs;
+        
+        @include media-up(md) {
+            padding: 0px;
+            gap: 2px;
+        }
+        @include media-up(xl) {
+            width: 800px;
+             padding: 8px 10px;
+            gap: 10px;
+        }
+        @include media-up(xxl) {
+            width: 1000px;
+             padding: 8px 10px;
+            gap: 10px;
+        }
+
+
+        @include media-up(xxxl) {
+            width: 1200px;
+            padding: 10px 12px;
+            gap: 15px;
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+
+            @include media-up(md) {
+
+                padding: 8px 10px;
+            }
 
             @include media-up(lg) {
-                padding: 10px;
-                gap: 10px;
+
+                padding: 5px;
             }
 
-            @include media-up(xxxl) {
-                padding: 25px;
-                gap: 15px;
-            }
 
-            .search {
-                width: 100%;
+
+
+
+
+            .range-slider-wrapper {
                 position: relative;
-                padding: 3px;
+                padding: 3px 0;
+
+
+                input[type="range"] {
+                    width: 100%;
+                    height: 4px;
+                    background: $linkColor;
+                    border-radius: 2px;
+                    outline: none;
+                    appearance: none;
+                    accent-color: $linkColor;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                    appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: #e09b25b6;
+                    cursor: pointer;
+                    box-shadow: 0 0 10px $linkColor;
+                    transition: transform 0.2s;
+                }
+
+                input[type="range"]::-webkit-slider-thumb:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            @include media-up(md) {
+                width: 32%;
+            }
+
+
+
+            label {
+                display: flex;
+                text-align: start;
+                // margin-bottom: 5px;
+                padding: 5px 8px;
+                font-size: 12px;
 
                 @include media-up(md) {
-                    width: 32%;
+                    font-size: 13px;
+                    // margin-bottom: 5px;
                 }
 
-
-                input,
-                select {
-                    width: 100%;
-                    padding: 5px;
-                    padding-right: 35px;
-                    font-family: cairo;
-                    border-radius: 5px;
-                    transition: 0.3s;
-                    border: 1px solid $paragraphs;
-                    background-color: #1212126b;
-                    color: $paragraphs;
-
-                    @include media-up(md) {
-                        padding-right: 30px;
-                        font-size: 10px;
-                    }
-
-                    @include media-up(lg) {
-                        padding-right: 35px;
-                        font-size: 12px;
-                    }
-
-                    @include media-up(xxxl) {
-                        padding-right: 40px;
-                        font-size: 20px;
-                    }
-
-                    &:focus {
-                        outline: none;
-                        border: 1px solid $linkColor;
-                    }
+                @include media-up(lg) {
+                    font-size: 16px;
+                    margin-bottom: 5px;
                 }
 
-                i {
-                    position: absolute;
-                    top: 50%;
-                    right: 15px;
-                    transform: translateY(-50%);
-                    color: $linkColor;
-                    font-size: 12px;
-                    text-align: center;
-
-                    @include media-up(xxxl) {
-                        font-size: 20px;
-                    }
-
+                @include media-up(xxl) {
+                    font-size: 18px;
+                    margin-bottom: 5px;
                 }
-
-                .btn {
-                    padding-right: 0;
+                @include media-up(xxxl) {
+                    font-size: 20px;
+                    margin-bottom: 5px;
                 }
             }
-        }
 
+
+            select {
+                width: 100%;
+                padding: 5px;
+                padding-right: 33px;
+                font-family: cairo;
+                border-radius: 15px;
+                transition: 0.3s;
+                border: 1px solid $paragraphs;
+                background-color: #1212126b;
+                color: $paragraphs;
+                font-size: 12px;
+
+
+                @include media-up(lg) {
+
+                    font-size: 15px;
+
+                }
+
+                @include media-up(xxxl) {
+                    padding-right: 40px;
+                    font-size: 20px;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid $linkColor;
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 75%;
+                right: 15px;
+                transform: translateY(-50%);
+                color: $linkColor;
+                font-size: 12px;
+                text-align: center;
+
+                @include media-up(md) {
+                    font-size: 15px;
+                    right: 20px;
+                    top: 72%;
+                }
+
+                @include media-up(lg) {
+                    font-size: 15px;
+                    right: 20px;
+                    top: 74%;
+                }
+
+                @include media-up(xxxl) {
+                    font-size: 20px;
+                }
+
+            }
+
+            button {
+                padding: 2px 15px;
+                border: 1px solid $linkColor;
+                @include media-up(xl){
+                    font-size: 15px;
+                }
+                @include media-up(xxl){
+                    font-size: 18px;
+                }
+                @include media-up(xxxl){
+                    font-size: 20px;
+                }
+
+            }
+        }
     }
+
 }
 
 .partners {
@@ -300,7 +416,7 @@
 
                 }
 
-             
+
 
                 .blog-category {
                     position: absolute;

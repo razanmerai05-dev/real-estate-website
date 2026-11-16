@@ -60,18 +60,53 @@
     </aside>
 
 
-    <section>
-        <div class="hero">
-            <div class="overlay"></div>
-            <div class="hero-info">
-                <h1>رويال العقارية وجهتك الأولى للبحث عن العقارات</h1>
-                <p>
-                    أينما كان طموحك، فور رويال ترشدك لأفضل المواقع الإستثمارية. خبرة عقارية مبتكرة تضع أرقى الفرص
-                    بين يديك.
-                </p>
-                <form action="">
-                    <div class="hero-search">
-                        <div class="search">
+
+    <section class="real-estate-hero">
+
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/v4.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-info">
+            <h1>رويال العقارية وجهتك الأولى للبحث عن العقارات</h1>
+            <p>
+                أينما كان طموحك، فور رويال ترشدك لأفضل المواقع الإستثمارية. خبرة عقارية مبتكرة تضع أرقى الفرص
+                بين يديك.
+            </p>
+
+            <form action="">
+                <div class="hero-search">
+                    <!-- <div class="search">
+                            <input type="text" placeholder="اكتب الموقع ">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div> -->
+
+                    <div class="search">
+                        <label for="">الموقع:</label>
+                        <select name="" id="">
+                            <option value="" selected disabled> الموقع </option>
+                            <option value="">طرطوس</option>
+                            <option value="">اللاذقية</option>
+                            <option value="">دمشق</option>
+                            <option value="">حلب</option>
+                            <option value="">إدلب</option>
+                            <option value="">حمص</option>
+                            <option value="">حماه</option>
+                        </select>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div class="search">
+                        <label for="">نوع العقار:</label>
+                        <select name="" id="">
+                            <option value="" selected disabled> نوع العقار</option>
+                            <option value="">منزل</option>
+                            <option value="">فيلا</option>
+                            <option value="">مزرعة</option>
+                        </select>
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <!-- <div class="search">
                             <select name="" id="">
                                 <option value="" selected disabled>اختر العملية</option>
                                 <option value="">بيع</option>
@@ -79,35 +114,37 @@
                                 <option value="">أجار</option>
                             </select>
                             <i class="fa-solid fa-circle-chevron-down"></i>
-                        </div>
-                        <div class="search">
-                            <select name="" id="">
-                                <option value="" selected disabled>اختر نوع العقار</option>
-                                <option value="">منزل</option>
-                                <option value="">فيلا</option>
-                                <option value="">مزرعة</option>
-                            </select>
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </div>
-                        <div class="search">
+                        </div> -->
+                    <!-- <div class="search">
                             <input type="text" placeholder="اكتب اسم المنطقة أو المدينة">
                             <i class="fa-solid fa-location-dot"></i>
+                        </div> -->
+
+                    <div class="search">
+                        
+                        <label for="">الميزانية : + $5.000.000 - $100.000
+                            </label>
+                        <div class="range-slider-wrapper">
+                            <input type="range" id="priceRange" min="100000" max="5000000" step="50000" value="2500000">
                         </div>
-                        <div class="search">
-                            <input type="text" placeholder="اكتب الموقع ">
-                            <i class="fa-solid fa-map-location-dot"></i>
+                        <div class="range-slider-wrapper">
+                            <div class="range-track"></div>
+                            <div class="range-thumb thumb-left"></div>
+                            <div class="range-thumb thumb-right"></div>
                         </div>
-                        <div class="search">
-                            <input type="text" placeholder="الميزانية">
-                            <i class="fa-solid fa-comment-dollar"></i>
-                        </div>
-                        <div class="search">
-                            <input type="submit" class="btn2 btn" value="ابحث عن العقار">
-                            <!-- <i class="fa-solid fa-magnifying-glass-location"></i> -->
-                        </div>
+
+
+
                     </div>
-                </form>
-            </div>
+                    <div class="search">
+                        <button class="btn2">البحث عم العقار
+                        </button>
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                        <!-- <input type="submit" class="btn2 btn" value="ابحث عن العقار"> -->
+                        <!-- <i class="fa-solid fa-magnifying-glass-location"></i> -->
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -137,8 +174,7 @@
 
                     <!-- العنصر المعيني الأيسر -->
                     <div class="diamond-item left">
-                        <img src="assets/images/cheken6.jpg"
-                            alt="House Left">
+                        <img src="assets/images/cheken6.jpg" alt="House Left">
                     </div>
 
                     <!-- أيقونة المنتصف المميزة -->
@@ -148,14 +184,12 @@
 
                     <!-- العنصر المعيني الأيمن -->
                     <div class="diamond-item right">
-                        <img src="assets/images/salon9.jpg"
-                            alt="House Right">
+                        <img src="assets/images/salon9.jpg" alt="House Right">
                     </div>
 
                     <!-- العنصر المعيني السفلي -->
                     <div class="diamond-item bottom">
-                        <img src="assets/images/bath4.jpg"
-                            alt="House Bottom">
+                        <img src="assets/images/bath4.jpg" alt="House Bottom">
                     </div>
                 </div>
 
@@ -821,7 +855,7 @@
                     <p class="review-text">
                         أكثر مايميز هذه الشركة هو الشفافية المطلفة والمصداقية كانت تجربة ممتازة وتوفير للكثير من الوقت
                         والجهد.
-                        
+
                     </p>
 
                     <div class="social-links">
@@ -917,7 +951,7 @@
                     <p class="review-text">
                         أكثر مايميز هذه الشركة هو الشفافية المطلفة والمصداقية كانت تجربة ممتازة وتوفير للكثير من الوقت
                         والجهد.
-                        
+
                     </p>
 
                     <div class="social-links">
@@ -1071,7 +1105,7 @@
     </section>
 
 
-    
+
     <section class="blogs">
         <h2 class="title-section">آخر الأخبار العقارية </h2>
         <p class="desc-section">
@@ -1170,10 +1204,10 @@
 
     </section>
 
-    
 
- 
-  <footer class="footer" id="call-us">
+
+
+    <footer class="footer" id="call-us">
         <div class="conatact container">
             <div class="inner-contact">
                 <div class="">
