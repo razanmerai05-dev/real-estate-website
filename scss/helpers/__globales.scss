@@ -9,6 +9,9 @@ body {
     font-family: cairo;
 
 }
+.container{
+    overflow-x: hidden !important;
+}
 
 a {
     text-decoration: none;
