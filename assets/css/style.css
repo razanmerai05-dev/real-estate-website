@@ -496,11 +496,11 @@ header {
   }
 }
 header nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  width: 100%;
 }
 header nav ul {
   list-style-type: none;

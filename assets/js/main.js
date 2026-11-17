@@ -15,8 +15,6 @@ document.addEventListener("click",(e)=>{
     }
 });
 
-
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -60,6 +58,29 @@ btns.forEach((btn) => {
     });
 });
 
+
+//animation
+ScrollReveal().reveal('.top' ,{
+      delay:400,
+    duration:600,
+    distance:'50px',
+    origin:'top',
+    easing:'ease-in-out',
+});
+ScrollReveal().reveal('.right' ,{
+      delay:400,
+    duration:600,
+    distance:'50px',
+    origin:'right',
+    easing:'ease-in-out',
+});
+ScrollReveal().reveal('.left' ,{
+      delay:400,
+    duration:600,
+    distance:'50px',
+    origin:'left',
+    easing:'ease-in-out',
+});
 
 
 
